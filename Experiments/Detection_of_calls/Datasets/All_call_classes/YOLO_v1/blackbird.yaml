@@ -9,10 +9,6 @@ train: train.txt #train.txt  # train images
 val: validate.txt  # val images 
 test: test.txt # test images 
 
-train: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/train # train images 
-val: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/validate # val images 
-test: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/test # test images 
-
 # Classes
 names:
   0: Check
