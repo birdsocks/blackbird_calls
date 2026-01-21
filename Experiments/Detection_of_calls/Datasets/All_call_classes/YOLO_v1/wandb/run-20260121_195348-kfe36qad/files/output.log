@@ -1,0 +1,143 @@
+Overriding model.yaml nc=80 with nc=16
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5, 3, True]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    119808  ultralytics.nn.modules.block.C3k2            [384, 128, 1, True]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     34304  ultralytics.nn.modules.block.C3k2            [256, 64, 1, True]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     95232  ultralytics.nn.modules.block.C3k2            [192, 128, 1, True]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    463104  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True, 0.5, True]
+ 23        [16, 19, 22]  1    247416  ultralytics.nn.modules.head.Detect           [16, 1, True, [64, 128, 256]]
+YOLO26n summary: 260 layers, 2,510,040 parameters, 2,510,040 gradients, 5.8 GFLOPs
+
+Transferred 606/708 items from pretrained weights
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 5317.7±1137.1 MB/s, size: 1250.6 KB)
+[K[34m[1mtrain: [0mScanning /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/labels... 948 images, 109 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 948/948 497.0it/s 1.9s0.1s
+[34m[1mtrain: [0mNew cache created: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/labels.cache
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3243.0±3314.3 MB/s, size: 1173.2 KB)
+[K[34m[1mval: [0mScanning /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/labels... 180 images, 14 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 180/180 226.9it/s 0.8s0.1s
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_00-05.png: 3 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_05-10.png: 3 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_10-15.png: 1 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_20-25.png: 1 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_25-30.png: 3 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_40-45.png: 1 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_45-50.png: 1 duplicate labels removed
+[34m[1mval: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/images/AZ08_Trial_2_trim_spec_50-55.png: 2 duplicate labels removed
+[34m[1mval: [0mNew cache created: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/labels.cache
+Plotting labels to /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/runs/detect/train4/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m MuSGD(lr=0.0005, momentum=0.9) with parameter groups 0 weight(decay=0.0), 0 weight(decay=0.0005), 24 bias(decay=0.0)
+Image sizes 1280 train, 1280 val
+Using 8 dataloader workers
+Logging results to [1m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/runs/detect/train4[0m
+Starting training for 200 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K: 0% ──────────── 0/60  8.8s
+Traceback (most recent call last):
+  File "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/YOLO_v1/YOLO_randomsplit_v1.py", line 7, in <module>
+    train_results = model.train(
+                    ^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/model.py", line 774, in train
+    self.trainer.train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 243, in train
+    self._do_train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 427, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 141, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 332, in loss
+    preds = self.forward(batch["img"])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 142, in forward
+    return self.predict(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 159, in predict
+    return self._predict_once(x, profile, visualize, embed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 181, in _predict_once
+    x = m(x)  # run
+        ^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/modules/head.py", line 148, in forward
+    one2one = self.forward_head(x_detach, **self.one2one)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/modules/head.py", line 138, in forward_head
+    scores = torch.cat([cls_head[i](x[i]).view(bs, self.nc, -1) for i in range(self.nl)], dim=-1)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/modules/head.py", line 138, in <listcomp>
+    scores = torch.cat([cls_head[i](x[i]).view(bs, self.nc, -1) for i in range(self.nl)], dim=-1)
+                        ^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/nn/modules/conv.py", line 78, in forward
+    return self.act(self.bn(self.conv(x)))
+                            ^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 548, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 543, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB. GPU 0 has a total capacity of 10.00 GiB of which 67.12 MiB is free. Including non-PyTorch memory, this process has 9.04 GiB memory in use. Of the allocated memory 8.38 GiB is allocated by PyTorch, and 137.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
