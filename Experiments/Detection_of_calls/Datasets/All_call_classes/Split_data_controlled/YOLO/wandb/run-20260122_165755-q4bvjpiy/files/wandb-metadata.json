@@ -1,0 +1,40 @@
+{
+  "os": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.14",
+  "startedAt": "2026-01-22T16:57:55.726760Z",
+  "program": "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/YOLO_controlledsplit_v1.py",
+  "codePath": "Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/YOLO_controlledsplit_v1.py",
+  "codePathLocal": "YOLO_controlledsplit_v1.py",
+  "git": {
+    "remote": "https://github.com/birdsocks/blackbird_calls.git",
+    "commit": "841690fe4e26c54f57daa5317a0621cb1b5cb3ab"
+  },
+  "email": "sllawson@smcm.edu",
+  "root": "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO",
+  "host": "cv4e-2026-student7",
+  "executable": "/home/Shelby/miniconda3/envs/Blackbird/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "gpu": "GRID A100X-10C",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "62241562624",
+      "used": "35006578688"
+    }
+  },
+  "memory": {
+    "total": "31534911488"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "GRID A100X-10C",
+      "memoryTotal": "10737418240",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-ac8ddd0e-f096-11f0-9122-cf983966c227"
+    }
+  ],
+  "cudaVersion": "12.2",
+  "writerId": "cv9rsa1l6gn8js2shpwoldpt8e2rxhjj"
+}
