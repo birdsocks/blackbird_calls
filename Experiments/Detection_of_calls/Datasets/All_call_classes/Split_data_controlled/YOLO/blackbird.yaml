@@ -4,10 +4,10 @@
 
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/dataset_split # dataset root dir
-train: train.txt #train.txt  # train images 
-val: validate.txt  # val images 
-test: test.txt # test images 
+path: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO # dataset root dir
+train: dataset_split/train.txt  # train images 
+val: dataset_split/validate.txt  # val images 
+test: dataset_split/test.txt  # test images 
 
 # Classes
 names:

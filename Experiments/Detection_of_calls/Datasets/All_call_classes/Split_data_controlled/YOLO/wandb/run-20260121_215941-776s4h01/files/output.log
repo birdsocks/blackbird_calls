@@ -1,0 +1,77 @@
+
+WARNING ⚠️ Dataset '/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/blackbird.yaml' images not found, missing path '/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/dataset_split/validate.txt'
+[KDownloading https://ultralytics.com/assets/coco8.zip to '/home/Shelby/blackbird_calls/datasets/coco8.zip': 100% ━━━━━━━━━━━━ 432.8KB 18.0MB/s 0.0s
+[KUnzipping /home/Shelby/blackbird_calls/datasets/coco8.zip to /home/Shelby/blackbird_calls/datasets/coco8...: 100% ━━━━━━━━━━━━ 25/25 5.2Kfiles/s 0.0s
+Dataset download success ✅ (0.2s), saved to [1m/home/Shelby/blackbird_calls/datasets[0m
+
+Overriding model.yaml nc=80 with nc=16
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5, 3, True]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    119808  ultralytics.nn.modules.block.C3k2            [384, 128, 1, True]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     34304  ultralytics.nn.modules.block.C3k2            [256, 64, 1, True]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     95232  ultralytics.nn.modules.block.C3k2            [192, 128, 1, True]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    463104  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True, 0.5, True]
+ 23        [16, 19, 22]  1    247416  ultralytics.nn.modules.head.Detect           [16, 1, True, [64, 128, 256]]
+YOLO26n summary: 260 layers, 2,510,040 parameters, 2,510,040 gradients, 5.8 GFLOPs
+
+Transferred 606/708 items from pretrained weights
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo11n.pt to 'yolo11n.pt': 100% ━━━━━━━━━━━━ 5.4MB 108.3MB/s 0.0s
+[34m[1mAMP: [0mchecks passed ✅
+Traceback (most recent call last):
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/data/base.py", line 176, in get_img_files
+    raise FileNotFoundError(f"{self.prefix}{p} does not exist")
+FileNotFoundError: [34m[1mtrain: [0m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/dataset_split/train.txt does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/YOLO_controlledsplit_v1.py", line 7, in <module>
+    train_results = model.train(
+                    ^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/model.py", line 774, in train
+    self.trainer.train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 243, in train
+    self._do_train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 364, in _do_train
+    self._setup_train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 323, in _setup_train
+    self.train_loader = self.get_dataloader(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/models/yolo/detect/train.py", line 93, in get_dataloader
+    dataset = self.build_dataset(dataset_path, mode, batch_size)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/models/yolo/detect/train.py", line 77, in build_dataset
+    return build_yolo_dataset(self.args, img_path, batch, self.data, mode=mode, rect=mode == "val", stride=gs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/data/build.py", line 236, in build_yolo_dataset
+    return dataset(
+           ^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/data/dataset.py", line 88, in __init__
+    super().__init__(*args, channels=self.data.get("channels", 3), **kwargs)
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/data/base.py", line 117, in __init__
+    self.im_files = self.get_img_files(self.img_path)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/data/base.py", line 181, in get_img_files
+    raise FileNotFoundError(f"{self.prefix}Error loading data from {img_path}\n{HELP_URL}") from e
+FileNotFoundError: [34m[1mtrain: [0mError loading data from /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/dataset_split/train.txt
+See https://docs.ultralytics.com/datasets for dataset formatting guidance.
