@@ -20,4 +20,6 @@ train_results = model.train(
     hsv_h=0.03,  # Hue augmentation - simulate different color mappings (increased from 0.015)
     hsv_s=0.9,  # Saturation augmentation - helps with different intensity patterns (increased from 0.7)
     hsv_v=0.6,  # Value/brightness augmentation - simulates different amplitude ranges (increased from 0.4)
+    lr0=0.1,  # Learning rate
+    lrf=0.001,  # Final learning rate
 )
