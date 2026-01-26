@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import os
 
 # Path to your trained model
-model_path = "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/runs/detect/train6/weights/best.pt"
+model_path = "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/runs/detect/train14/weights/best.pt"
 
 # Load the trained model
 model = YOLO(model_path)

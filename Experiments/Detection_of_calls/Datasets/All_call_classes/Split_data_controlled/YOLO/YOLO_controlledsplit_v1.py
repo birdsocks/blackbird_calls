@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 
-# Load a pretrained YOLO26n model
-model = YOLO("yolo26n.pt")
+# Load a pretrained YOLO8n model
+model = YOLO("yolov8n.pt")
 
 # Train the model
 train_results = model.train(
