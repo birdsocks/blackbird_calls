@@ -1,0 +1,11 @@
+{"time":"2026-01-27T18:40:51.882698387Z","level":"INFO","msg":"stream: starting","core version":"0.24.0"}
+{"time":"2026-01-27T18:40:52.054505551Z","level":"INFO","msg":"stream: created new stream","id":"ctgliiet"}
+{"time":"2026-01-27T18:40:52.054628481Z","level":"INFO","msg":"handler: started","stream_id":"ctgliiet"}
+{"time":"2026-01-27T18:40:52.054814501Z","level":"INFO","msg":"stream: started","id":"ctgliiet"}
+{"time":"2026-01-27T18:40:52.054895945Z","level":"INFO","msg":"writer: started","stream_id":"ctgliiet"}
+{"time":"2026-01-27T18:40:52.054922665Z","level":"INFO","msg":"sender: started","stream_id":"ctgliiet"}
+{"time":"2026-01-27T18:44:23.978613766Z","level":"INFO","msg":"stream: closing","id":"ctgliiet"}
+{"time":"2026-01-27T18:44:24.242723861Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-27T18:44:24.378598674Z","level":"INFO","msg":"handler: closed","stream_id":"ctgliiet"}
+{"time":"2026-01-27T18:44:24.378679836Z","level":"INFO","msg":"sender: closed","stream_id":"ctgliiet"}
+{"time":"2026-01-27T18:44:24.378694494Z","level":"INFO","msg":"stream: closed","id":"ctgliiet"}

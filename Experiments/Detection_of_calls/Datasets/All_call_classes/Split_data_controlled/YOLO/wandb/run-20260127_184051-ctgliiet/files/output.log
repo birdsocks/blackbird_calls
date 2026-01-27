@@ -1,0 +1,551 @@
+Overriding class names with single class.
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 22        [15, 18, 21]  1    751507  ultralytics.nn.modules.head.Detect           [1, 16, None, [64, 128, 256]]
+Model summary: 130 layers, 3,011,043 parameters, 3,011,027 gradients, 8.2 GFLOPs
+
+Transferred 319/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 6677.9±642.5 MB/s, size: 1179.5 KB)
+[K[34m[1mtrain: [0mScanning /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels... 0 images, 936 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 936/936 637.4it/s 1.5s0.1s
+WARNING ⚠️ [34m[1mtrain: [0mNo labels found in /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels.cache. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+[34m[1mtrain: [0mNew cache created: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels.cache
+WARNING ⚠️ Labels are missing or empty in /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels.cache, training may not work correctly. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 4608.4±4667.0 MB/s, size: 1174.6 KB)
+[K[34m[1mval: [0mScanning /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels... 0 images, 192 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 192/192 440.8it/s 0.4s0.1s
+WARNING ⚠️ [34m[1mval: [0mNo labels found in /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels.cache. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+[34m[1mval: [0mNew cache created: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels.cache
+WARNING ⚠️ Labels are missing or empty in /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/labels.cache, training may not work correctly. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+Plotting labels to /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/runs/detect/train15/labels.jpg...
+WARNING ⚠️ zero-size array to reduction operation maximum which has no identity
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.1' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m MuSGD(lr=0.002, momentum=0.9) with parameter groups 0 weight(decay=0.0), 0 weight(decay=0.0005), 0 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1m/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/runs/detect/train15[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      1/100       3.8G          0      224.2          0          0        640: 100% ━━━━━━━━━━━━ 30/30 2.1it/s 14.2s0.2ss
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 8.9it/s 0.3s1.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      2/100      3.82G          0      114.7          0          0        640: 100% ━━━━━━━━━━━━ 30/30 5.5it/s 5.4s0.2s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 8.4it/s 0.4s0.3s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      3/100      3.84G          0      36.56          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 12.1it/s 0.2s.3s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      4/100      3.84G          0      5.398          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.6it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      5/100      3.84G          0     0.2534          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.6it/s 3.5s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 18.7it/s 0.2s.2s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      6/100      3.86G          0   0.002607          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.0it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      7/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.8it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      8/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.8it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      9/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 27.3it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     10/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.3it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     11/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 6.0it/s 5.0s0.2s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 17.4it/s 0.2s.2s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     12/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 7.8it/s 3.9s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.6it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     13/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.0it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 26.1it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     14/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 25.2it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     15/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 21.0it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     16/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.5it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     17/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.6it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     18/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 25.7it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     19/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 23.6it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     20/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.5it/s 3.5s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 26.5it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     21/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 6.3it/s 4.8s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 25.4it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     22/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.5it/s 3.5s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.6it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     23/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.5it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     24/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.4it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     25/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 25.9it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     26/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.1it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 27.3it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     27/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 26.9it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     28/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.5it/s 3.5s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 25.6it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     29/100      3.86G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 5.9it/s 5.1s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 27.8it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     30/100      3.87G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.2it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     31/100      3.87G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 27.1it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     32/100      3.87G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.7it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     33/100      3.87G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 27.3it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     34/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.4it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.7it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     35/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.1it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.9it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     36/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.5it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     37/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 26.9it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     38/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.1it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.5it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     39/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 25.2it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     40/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 7.9it/s 3.8s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 29.3it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     41/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.1it/s 3.7s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 22.4it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     42/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.2it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     43/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.2it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 27.9it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     44/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.9it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     45/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 7.7it/s 3.9s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 28.3it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     46/100      3.89G          0          0          0          0        640: 100% ━━━━━━━━━━━━ 30/30 8.3it/s 3.6s0.1s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 3/3 26.1it/s 0.1s
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/utils/metrics.py:837: RuntimeWarning: Mean of empty slice.
+  i = smooth(f1_curve.mean(0), 0.1).argmax()  # max F1 index
+/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+                   all        192          0          0          0          0          0
+WARNING ⚠️ no labels found in detect set, cannot compute metrics without labels
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K     47/100      3.89G          0          0          0          0        640: 43% ━━━━━─────── 13/30 8.3it/s 1.7s<2.1s
+Traceback (most recent call last):
+  File "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/YOLO_controlledsplit_v1.py", line 7, in <module>
+    train_results = model.train(
+                    ^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/model.py", line 774, in train
+    self.trainer.train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 243, in train
+    self._do_train()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 436, in _do_train
+    self.optimizer_step()
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 688, in optimizer_step
+    self.scaler.step(self.optimizer)
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/amp/grad_scaler.py", line 462, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/amp/grad_scaler.py", line 357, in _maybe_opt_step
+    retval = optimizer.step(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/optim/muon.py", line 218, in step
+    update = muon_update(
+             ^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/optim/muon.py", line 94, in muon_update
+    update = zeropower_via_newtonschulz5(update)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Shelby/miniconda3/envs/Blackbird/lib/python3.11/site-packages/ultralytics/optim/muon.py", line 53, in zeropower_via_newtonschulz5
+    X = a * X + B @ X
+    ^
+KeyboardInterrupt

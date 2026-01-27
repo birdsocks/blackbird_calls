@@ -1,0 +1,269 @@
+_wandb:
+    value:
+        cli_version: 0.24.0
+        e:
+            gnvtj3obvi6nukp7d0vxb2sn43rk9xzk:
+                codePath: Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/YOLO_controlledsplit_v1.py
+                codePathLocal: YOLO_controlledsplit_v1.py
+                cpu_count: 8
+                cpu_count_logical: 8
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "62241562624"
+                        used: "61256359936"
+                email: sllawson@smcm.edu
+                executable: /home/Shelby/miniconda3/envs/Blackbird/bin/python
+                git:
+                    commit: 5ac1c15ccf196275b0cc49a1ca35349dc5894b6c
+                    remote: https://github.com/birdsocks/blackbird_calls.git
+                gpu: GRID A100X-10C
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "10737418240"
+                      name: GRID A100X-10C
+                      uuid: GPU-ac8ddd0e-f096-11f0-9122-cf983966c227
+                host: cv4e-2026-student7
+                memory:
+                    total: "31534911488"
+                os: Linux-6.8.0-90-generic-x86_64-with-glibc2.35
+                program: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/YOLO_controlledsplit_v1.py
+                python: CPython 3.11.14
+                root: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO
+                startedAt: "2026-01-27T18:40:51.644716Z"
+                writerId: gnvtj3obvi6nukp7d0vxb2sn43rk9xzk
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 13
+                - 16
+                - 61
+            "4": 3.11.14
+            "5": 0.24.0
+            "12": 0.24.0
+            "13": linux-x86_64
+agnostic_nms:
+    value: false
+amp:
+    value: true
+angle:
+    value: 1
+augment:
+    value: false
+auto_augment:
+    value: randaugment
+batch:
+    value: 32
+bgr:
+    value: 0
+box:
+    value: 7.5
+cache:
+    value: false
+cfg:
+    value: null
+classes:
+    value: null
+close_mosaic:
+    value: 10
+cls:
+    value: 0.5
+compile:
+    value: false
+conf:
+    value: null
+copy_paste:
+    value: 0
+copy_paste_mode:
+    value: flip
+cos_lr:
+    value: false
+cutmix:
+    value: 0
+data:
+    value: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/blackbird.yaml
+degrees:
+    value: 0
+deterministic:
+    value: true
+device:
+    value: "0"
+dfl:
+    value: 1.5
+dnn:
+    value: false
+dropout:
+    value: 0
+dynamic:
+    value: false
+embed:
+    value: null
+epochs:
+    value: 100
+erasing:
+    value: 0.4
+exist_ok:
+    value: false
+fliplr:
+    value: 0
+flipud:
+    value: 0
+format:
+    value: torchscript
+fraction:
+    value: 1
+freeze:
+    value: null
+half:
+    value: false
+hsv_h:
+    value: 0.03
+hsv_s:
+    value: 0.9
+hsv_v:
+    value: 0.6
+imgsz:
+    value: 640
+int8:
+    value: false
+iou:
+    value: 0.7
+keras:
+    value: false
+kobj:
+    value: 1
+line_width:
+    value: null
+lr0:
+    value: 0.1
+lrf:
+    value: 0.001
+mask_ratio:
+    value: 4
+max_det:
+    value: 300
+mixup:
+    value: 0
+mode:
+    value: train
+model:
+    value: yolov8n.pt
+momentum:
+    value: 0.937
+mosaic:
+    value: 1
+multi_scale:
+    value: 0
+name:
+    value: train15
+nbs:
+    value: 64
+nms:
+    value: false
+opset:
+    value: null
+optimize:
+    value: false
+optimizer:
+    value: auto
+overlap_mask:
+    value: true
+patience:
+    value: 60
+perspective:
+    value: 0
+plots:
+    value: true
+pose:
+    value: 12
+pretrained:
+    value: true
+profile:
+    value: false
+project:
+    value: null
+rect:
+    value: false
+resume:
+    value: false
+retina_masks:
+    value: false
+rle:
+    value: 1
+save:
+    value: true
+save_conf:
+    value: false
+save_crop:
+    value: false
+save_dir:
+    value: /home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/YOLO/runs/detect/train15
+save_frames:
+    value: false
+save_json:
+    value: false
+save_period:
+    value: -1
+save_txt:
+    value: false
+scale:
+    value: 0
+seed:
+    value: 0
+shear:
+    value: 0
+show:
+    value: false
+show_boxes:
+    value: true
+show_conf:
+    value: true
+show_labels:
+    value: true
+simplify:
+    value: true
+single_cls:
+    value: true
+source:
+    value: null
+split:
+    value: val
+stream_buffer:
+    value: false
+task:
+    value: detect
+time:
+    value: null
+tracker:
+    value: botsort.yaml
+translate:
+    value: 0.1
+val:
+    value: true
+verbose:
+    value: true
+vid_stride:
+    value: 1
+visualize:
+    value: false
+warmup_bias_lr:
+    value: 0.1
+warmup_epochs:
+    value: 3
+warmup_momentum:
+    value: 0.8
+weight_decay:
+    value: 0.0005
+workers:
+    value: 8
+workspace:
+    value: null
