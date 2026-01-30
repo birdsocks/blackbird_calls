@@ -1,5 +1,9 @@
 import os
 from pathlib import Path
+import pandas as pd
+from opensoundscape import Audio
+from pathlib import Path
+from collections import Counter
 
 # Directory containing the audio files
 audio_dir = "/mnt/class_data/Shelby/One_Minute_Audio"
@@ -20,11 +24,6 @@ for wav_file in wav_files:
         print(f"Renamed: {wav_file.name} -> {new_name}")
 
 print(f"\nTotal files renamed: {renamed_count}")
-
-import pandas as pd
-from opensoundscape import Audio
-from pathlib import Path
-import os
 
 # Define paths
 audio_dir = "/mnt/class_data/Shelby/One_Minute_Audio"
@@ -76,10 +75,6 @@ for idx, row in df.iterrows():
         print(f"Processed {processed_count}/{len(df)} annotations...")
 
 print(f"Completed! Processed {processed_count} audio clips and saved to {output_dir}")
-
-import os
-from pathlib import Path
-from collections import Counter
 
 # Path to the trimmed audio files
 call_audios_dir = "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/OpenSoundScape/Call_audios"

@@ -1,4 +1,7 @@
 import bioacoustics_model_zoo as bmz
+import os
+from pathlib import Path
+import pandas as pd
 
 call_audios_dir = "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/OpenSoundScape/Call_audios"
 padded_output_dir = os.path.join(call_audios_dir, "padded_3s")
@@ -12,7 +15,6 @@ embeddings = model.embed(wav_files)
 embeddings.to_csv("/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/OpenSoundScape/birds_embeddings_birdnet_padded_3s.csv")
 
 #rename file to include call type column
-import pandas as pd
 
 # Load the embeddings CSV
 csv_path = "/home/Shelby/blackbird_calls/Experiments/Detection_of_calls/Datasets/All_call_classes/Split_data_controlled/OpenSoundScape/birds_embeddings_birdnet_padded_3s.csv"
